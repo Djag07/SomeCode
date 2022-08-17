@@ -64,7 +64,7 @@ Asset::getInstance()->addJs("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apik
 					custom: image
 				}, {
 					iconLayout: 'default#image',
-					iconImageHref: '/local/templates/vodokanal/components/bitrix/news.list/map_with_vdk_points/images/' + image + '.svg',
+					iconImageHref: image + '.svg',
 					iconImageSize: [32, 52],
 					zIndex:1000,
 					balloonShadow: true,
@@ -100,7 +100,7 @@ Asset::getInstance()->addJs("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apik
 					custom: image
 				}, {
 					iconLayout: 'default#image',
-					iconImageHref: '/local/templates/vodokanal/components/bitrix/news.list/map_with_vdk_points/images/' + image + '.svg',
+					iconImageHref: image + '.svg',
 					iconImageSize: [32, 52],
 					zIndex:1000,
 					balloonShadow: true,
@@ -141,7 +141,7 @@ Asset::getInstance()->addJs("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apik
 					custom: image
 				}, {
 					iconLayout: 'default#image',
-					iconImageHref: '/local/templates/vodokanal/components/bitrix/news.list/map_with_vdk_points/images/' + image + '.svg',
+					iconImageHref: image + '.svg',
 					iconImageSize: [32, 52],
 					zIndex:1000,
 					balloonShadow: true,
@@ -193,23 +193,16 @@ Asset::getInstance()->addJs("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apik
 
 		$("#map-first-points:checkbox").change(function(){
 			if($(this).prop('checked')){
-				Fountains.removeAll();
-				if (!Toilets.getLength() || Toilets.get(1).properties._data.custom.indexOf("act") == -1) {
-					Toilets.removeAll();
+				First_points.removeAll();
+				if (!Second_points.getLength() || Second_points.get(1).properties._data.custom.indexOf("act") == -1) {
+					Second_points.removeAll();
 				}
-				if (!Repairs.getLength() || Repairs.get(1).properties._data.custom.indexOf("act") == -1) {
-					Repairs.removeAll();
+				if (!Third_points.getLength() || Third_points.get(1).properties._data.custom.indexOf("act") == -1) {
+					Third_points.removeAll();
 				}
-				AddFountains('fountain_act');
+				AddFirstPoints('fountain_act');
 			}else{
-				Fountains.removeAll();
-				if ((Toilets.getLength() && Toilets.get(1).properties._data.custom.indexOf("act") != -1) ||
-					(Repairs.getLength() && Repairs.get(1).properties._data.custom.indexOf("act") != -1)) {
-				} else {
-					//AddToilets('toilet');
-					//AddRepairs('repair');
-					//AddFountains('fountain');
-				}
+				First_points.removeAll();
 			}
 		}); 
 
