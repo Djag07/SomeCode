@@ -123,10 +123,10 @@ Asset::getInstance()->addJs("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apik
 					name = (this.NAME) ? "<div class='balHeader'>" + this.NAME + "</div>" : '',
 					type = (this.THIRD_POINTS_OBJECT) ? "<div class='balType'><b>Вид работ:</b><p>" + this.THIRD_POINTS_OBJECT + "</p></div>" : '',
 					interval = (this.THIRD_POINTS_START_DATE && this.THIRD_POINTS_END_DATE) ? "<div class='balInterval'><b>Сроки ремонта:</b><p>" + 
-            this.THIRD_POINTS_START_DATE + " - " + this.THIRD_POINTS_END_DATE + "</p></div>" : '',
+            					this.THIRD_POINTS_START_DATE + " - " + this.THIRD_POINTS_END_DATE + "</p></div>" : '',
 					address = (this.THIRD_POINTS_ADDRESSES) ? "<div class='balAddr'><b>Адрес:</b><p>" + this.THIRD_POINTS_ADDRESSES + "</p></div>" : '',
 					constrains = (this.THIRD_POINTS_CONSTRAINS) ? "<div class='balStop'><b>Ограничения ремонта:</b><p>" + this.THIRD_POINTS_CONSTRAINS + 
-            "</p></div>" : '',
+            					"</p></div>" : '',
 					close = (this.THIRD_POINTS_ROAD_CLOSE) ? "<div class='balStop'><b>Ограничение движения:</b><p>" + this.THIRD_POINTS_ROAD_CLOSE + "</p></div>" : '',
 					comment = (this.THIRD_POINTS_COMMENT) ? "<div class='balStop'><b>Альтернативное снабжение:</b><p>" + this.THIRD_POINTS_COMMENT + "</p></div>" : '';
 
