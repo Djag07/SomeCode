@@ -1,5 +1,9 @@
 <?php
 
+/*
+The class unlinks or binds the badge to products linked to a specific promotion when it is created/modified/activated/deactivated
+*/
+
 namespace Local\Iblock;
 
 use Bitrix\Iblock\SectionTable;
